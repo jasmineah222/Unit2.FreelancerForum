@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+
+#title {
+    font-size: 40px;
+}
+
+#title { grid-area: header; }
+#average { grid-area: header2; }
+#Name { grid-area: menu1; }
+#Occupation { grid-area: menu2; }
+#startingPrice { grid-area: menu3; }
+.content { grid-area: main1; }
+
+
+#freelance-box{
+    display: grid;
+    grid-template-areas: 'header header header'
+                        'header2 header2 header2'
+                          'menu1 menu2 menu3'
+                          'main1 main1 main1';
+    padding: 20px;
+}
