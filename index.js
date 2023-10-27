@@ -22,7 +22,7 @@ let workTable =[{name: 'Alice', occupation: 'Writer', startingPrice: 30},
 */
 
 
-function renderWorkers () {
+function renderWorkers() {
     let workbox = document.getElementById('freelance-box')
 
     for (let i = 0; i < workTable.length; i++) {
@@ -40,4 +40,27 @@ function renderWorkers () {
     }
 } 
 
-renderWorkers ()
+renderWorkers()
+
+function addNew() {
+
+    let workbox = document.getElementById('freelance-box')
+
+    let i = 0
+    
+    let currentWork = workTable[i]
+
+
+    let workDiv = document.createElement('div')
+
+        workDiv.innerHTML = `<p>Name: ${currentWork.name}</p>
+                             <p>Occupation: ${currentWork.occupation}</p>
+                             <p>Starting Price: $${currentWork.startingPrice}</p>`
+                            
+        workbox.appendChild(workDiv)
+
+}
+
+setInterval(() => {
+    addNew()
+}, 5000)
